@@ -1,0 +1,39 @@
+---
+import houseIcon from "../components/icons/houseIcon.astro";
+import abilitiesIcon from "../components/icons/abilitiesIcon.astro";
+import projectsIcon from "../components/icons/projectsIcon.astro";
+import "../styles/global.css";
+
+const links = [
+  {
+    Svg: houseIcon,
+    href: "/",
+  },
+  {
+    Svg: abilitiesIcon,
+    href: "/tecnologies",
+  },
+  {
+    Svg: projectsIcon,
+    href: "/projects",
+  },
+];
+---
+
+<nav
+  class="flex items-center justify-center h-16 w-3/4 bg-[#00A9A5] rounded-2xl mt-8 text-[#0B5351]"
+>
+  <ul class="flex flex-row gap-10">
+    {
+      links.map(({ Svg, href }) => {
+        return (
+          <li>
+            <a href={href}>
+              <Svg />
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>

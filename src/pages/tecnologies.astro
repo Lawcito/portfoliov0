@@ -1,0 +1,34 @@
+---
+import SwiperComponent from "../components/SwiperComponent.jsx";
+import Layout from "../layouts/Layout.astro";
+
+const svgs = [
+  { svg: "/imgs/astro_dark.svg", description: "Proyecto con Astro" },
+  { svg: "/imgs/react_dark.svg", description: "Proyecto con React" },
+  { svg: "/imgs/html5.svg", description: "Proyecto con HTML5" },
+  { svg: "/imgs/javascript.svg", description: "Proyecto con JavaScript" },
+  { svg: "/imgs/nodejs.svg", description: "Proyecto con Node.js" },
+  { svg: "/imgs/python.svg", description: "Proyecto con Python" },
+  { svg: "/imgs/tailwindcss.svg", description: "Proyecto con TailwindCSS" },
+  { svg: "/imgs/css.svg", description: "Proyecto con CSS" },
+  { svg: "/imgs/firebase.svg", description: "Proyecto con Firebase" },
+  { svg: "/imgs/git.svg", description: "Proyecto con Git" },
+];
+---
+
+
+<Layout>
+  <div
+    class="flex flex-col items-center w-full h-full mt-20 gap-4 text-[#F7F7F5]"
+  >
+    <section
+      class="flex flex-col items-center justify-center w-3/4 h-24 rounded-xl bg-[#00A9A5]"
+    >
+      <h2>Proyectos</h2>
+    </section>
+    <SwiperComponent
+      client:load
+      arrayObjet={svgs}
+    />
+  </div>
+</Layout>

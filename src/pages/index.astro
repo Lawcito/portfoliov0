@@ -1,11 +1,77 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Github from "../components/icons/githubIcon.astro";
+import Mail from "../components/icons/mailIcon.astro";
+import Linkedin from "../components/icons/linkedinIcon.astro";
+import "../styles/global.css";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const socials = [
+  {
+    icon: Github,
+    href: "",
+    name: "GitHub",
+  },
+  {
+    icon: Linkedin,
+    href: "",
+    name: "Linkedin",
+  },
+  {
+    icon: Mail,
+    href: "",
+    name: "eMail",
+  },
+];
 ---
 
 <Layout>
-	<Welcome />
+  <div
+    class="flex flex-col items-center mt-20 w-full h-full gap-2 text-[#F7F7F5]"
+  >
+    <section class="flex flex-col justify-center w-3/4 h-3/4 rounded-xl bg-[#00A9A5] p-2 gap-4">
+      <h1 class="text-2xl">Lawcito</h1>
+      <p class="text-md">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae id,
+        facere cupiditate ipsa recusandae aliquid maiores ex suscipit sunt non
+        eligendi maxime reprehenderit in architecto repellendus, pariatur
+        provident velit eveniet!
+      </p>
+    </section>
+    <section class="flex flex-row w-3/4 h-12 gap-2">
+      <div class="w-full h-full rounded-xl bg-[#00A9A5]">
+        <ul
+          class="flex flex-row gap-4 justify-center items-center h-full w-full"
+        >
+          {
+            socials.map((social) => {
+              return (
+                <li>
+                  <a href={social.href}>
+                    <social.icon />
+                  </a>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </div>
+      <div class="w-full h-full rounded-xl bg-[#0B5351]"></div>
+    </section>
+    <section class="flex flex-row w-3/4 h-12 gap-2">
+      <div class="w-full h-full rounded-xl bg-[#0B5351]"></div>
+      <div
+        class="flex items-center justify-center w-full h-full rounded-xl bg-[#00A9A5]"
+      >
+        <a href="/tecnologies">Tecnologías</a>
+      </div>
+    </section>
+    <section class="flex flex-row w-3/4 h-12 gap-2">
+      <div
+        class="flex items-center justify-center w-full h-full rounded-xl bg-[#00A9A5]"
+      >
+         <a href="/projects">Pryoectos</a>
+      </div>
+      <div class="w-full h-full rounded-xl bg-[#0B5351]"></div>
+    </section>
+  </div>
 </Layout>

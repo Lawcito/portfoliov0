@@ -1,0 +1,25 @@
+---
+import SwiperComponent from "../components/SwiperComponent.jsx";
+import Layout from "../layouts/Layout.astro";
+const images = [
+  { img: "/imgs/SapuCraft.webp", description: "Juego tipo Minecraft" },
+  { img: "/imgs/tattooWeb.webp", description: "Web de tatuajes" },
+  { img: "/imgs/pokemonTrucho.webp", description: "Proyecto estilo Pokémon" },
+];
+---
+
+<Layout>
+  <div
+    class="flex flex-col items-center w-full h-full mt-20 gap-4 text-[#F7F7F5]"
+  >
+    <section
+      class="flex flex-col items-center justify-center w-3/4 h-16 rounded-xl bg-[#00A9A5]"
+    >
+      <h2>Proyectos</h2>
+    </section>
+    <SwiperComponent
+      client:load
+      arrayObjet={images}
+    />
+  </div>
+</Layout>
