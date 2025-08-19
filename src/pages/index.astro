@@ -8,17 +8,17 @@ import "../styles/global.css";
 const socials = [
   {
     icon: Github,
-    href: "",
+    href: "https://github.com/Lawcito",
     name: "GitHub",
   },
   {
     icon: Linkedin,
-    href: "",
+    href: "https://www.linkedin.com/in/emir-negrete/",
     name: "Linkedin",
   },
   {
     icon: Mail,
-    href: "",
+    href: "mailto:emiraleconegrete@gmail.com",
     name: "eMail",
   },
 ];
@@ -28,13 +28,15 @@ const socials = [
   <div
     class="flex flex-col items-center mt-20 w-full h-full gap-2 text-[#F7F7F5]"
   >
-    <section class="flex flex-col justify-center w-3/4 h-3/4 rounded-xl bg-[#00A9A5] p-2 gap-4">
+    <section
+      class="flex flex-col justify-center w-3/4 h-3/4 rounded-xl bg-[#00A9A5] p-2 gap-4"
+    >
       <h1 class="text-2xl">Lawcito</h1>
       <p class="text-md">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae id,
-        facere cupiditate ipsa recusandae aliquid maiores ex suscipit sunt non
-        eligendi maxime reprehenderit in architecto repellendus, pariatur
-        provident velit eveniet!
+        Hola, soy Emir, más conocido por mi gametag "Lawcito". Tengo 23 años,
+        estudio en la UTN La Plata y me encuentro continuamente desarrollando
+        mis habilidades como programador y desarrollador web, ya sea en cursos o
+        de forma autodidacta.
       </p>
     </section>
     <section class="flex flex-row w-3/4 h-12 gap-2">
@@ -46,7 +48,7 @@ const socials = [
             socials.map((social) => {
               return (
                 <li>
-                  <a href={social.href}>
+                  <a href={social.href} target="_blank">
                     <social.icon />
                   </a>
                 </li>
@@ -69,7 +71,7 @@ const socials = [
       <div
         class="flex items-center justify-center w-full h-full rounded-xl bg-[#00A9A5]"
       >
-         <a href="/projects">Pryoectos</a>
+        <a href="/projects">Pryoectos</a>
       </div>
       <div class="w-full h-full rounded-xl bg-[#0B5351]"></div>
     </section>

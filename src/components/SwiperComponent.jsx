@@ -12,7 +12,7 @@ function SwiperComponent({ arrayObjet }) {
     <div className="flex flex-col items-center w-full h-full">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
-        pagination={{ clickable: true }}
+        pagination={!hasSVG ? { clickable: true } : false}
         autoplay={
           hasSVG
             ? {
@@ -30,7 +30,7 @@ function SwiperComponent({ arrayObjet }) {
         {arrayObjet.map((item, index) => (
           <SwiperSlide
             key={index}
-            className="flex items-center justify-center w-full h-full border"
+            className="flex items-center justify-center w-full h-full"
           >
             {item.img ? (
               <img
@@ -42,7 +42,7 @@ function SwiperComponent({ arrayObjet }) {
               <img
                 src={item.svg}
                 alt={item.description}
-                className="flex h-16 w-full border"
+                className="flex h-16 w-full"
               />
             )}
           </SwiperSlide>

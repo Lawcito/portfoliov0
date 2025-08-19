@@ -2,9 +2,20 @@
 import SwiperComponent from "../components/SwiperComponent.jsx";
 import Layout from "../layouts/Layout.astro";
 const images = [
-  { img: "/imgs/SapuCraft.webp", description: "Juego tipo Minecraft" },
-  { img: "/imgs/tattooWeb.webp", description: "Web de tatuajes" },
-  { img: "/imgs/pokemonTrucho.webp", description: "Proyecto estilo Pokémon" },
+  {
+    img: "/imgs/SapuCraft.webp",
+    description: `En este proyecto realizado para un servidor de minecraft con amigos aprendí a integrar FireBase a un proyecto y utilizarlo`,
+  },
+  {
+    img: "/imgs/tattooWeb.webp",
+    description:
+      "Página web de tatuajes en la que me encargué de crear el Carrusel de links, footer y el Slider de Imagenes",
+  },
+  {
+    img: "/imgs/pokemonTrucho.webp",
+    description:
+      "Juego simple de pokemon creado en el curso de Programador del CFL404",
+  },
 ];
 ---
 
@@ -17,9 +28,8 @@ const images = [
     >
       <h2>Proyectos</h2>
     </section>
-    <SwiperComponent
-      client:load
-      arrayObjet={images}
-    />
+    <span class="h-3/4 w-full">
+      <SwiperComponent client:load arrayObjet={images} />
+    </span>
   </div>
 </Layout>
