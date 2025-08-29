@@ -3,42 +3,84 @@ import SwiperComponent from "../components/SwiperComponent.jsx";
 import Layout from "../layouts/Layout.astro";
 
 const svgs = [
-  { svg: "/imgs/astro_dark.svg", description: "Proyecto con Astro" },
-  { svg: "/imgs/react_dark.svg", description: "Proyecto con React" },
-  { svg: "/imgs/html5.svg", description: "Proyecto con HTML5" },
-  { svg: "/imgs/javascript.svg", description: "Proyecto con JavaScript" },
-  { svg: "/imgs/nodejs.svg", description: "Proyecto con Node.js" },
-  { svg: "/imgs/python.svg", description: "Proyecto con Python" },
-  { svg: "/imgs/tailwindcss.svg", description: "Proyecto con TailwindCSS" },
-  { svg: "/imgs/css.svg", description: "Proyecto con CSS" },
-  { svg: "/imgs/firebase.svg", description: "Proyecto con Firebase" },
-  { svg: "/imgs/git.svg", description: "Proyecto con Git" },
+  {
+    svg: "/imgs/astro_dark.svg",
+    description: "svg de la tecnología Astro",
+    href: "https://docs.astro.build/",
+  },
+  {
+    svg: "/imgs/react_dark.svg",
+    description: "svg de la tecnología React",
+    href: "https://react.dev/",
+  },
+  {
+    svg: "/imgs/html5.svg",
+    description: "svg de la tecnología HTML5",
+    href: "https://developer.mozilla.org/es/docs/Web/HTML",
+  },
+  {
+    svg: "/imgs/javascript.svg",
+    description: "svg de la tecnología JavaScript",
+    href: "https://developer.mozilla.org/docs/Web/JavaScript",
+  },
+  {
+    svg: "/imgs/nodejs.svg",
+    description: "svg de la tecnología Node.js",
+    href: "https://nodejs.org/en/docs",
+  },
+  {
+    svg: "/imgs/python.svg",
+    description: "svg de la tecnología Python",
+    href: "https://docs.python.org/3/",
+  },
+  {
+    svg: "/imgs/tailwindcss.svg",
+    description: "svg de la tecnología TailwindCSS",
+    href: "https://tailwindcss.com/docs",
+  },
+  {
+    svg: "/imgs/css.svg",
+    description: "svg de la tecnología CSS",
+    href: "https://developer.mozilla.org/docs/Web/CSS",
+  },
+  {
+    svg: "/imgs/firebase.svg",
+    description: "svg de la tecnología Firebase",
+    href: "https://firebase.google.com/docs",
+  },
+  {
+    svg: "/imgs/git.svg",
+    description: "svg de la tecnología Git",
+    href: "https://git-scm.com/doc",
+  },
 ];
 ---
 
 <Layout>
   <div
-    class="flex flex-col items-center w-full h-full mt-20 gap-4 text-[#F7F7F5]"
+    class="flex flex-col items-center w-full h-full mt-20 gap-4 text-[#F7F7F5] lg:w-screen lg:h-screen"
   >
     <section
-      class="flex flex-col items-center justify-center w-3/4 h-16 rounded-xl bg-[#00A9A5]"
+      class="flex flex-col items-center justify-center w-3/4 h-16 rounded-xl bg-[#4E148C] lg:w-1/3 lg:h-1/9 mt-8"
     >
       <h2>Tecnologías</h2>
     </section>
-    <section class="flex flex-col items-center justify-center w-3/4 h-16">
+    <section
+      class="flex flex-col items-center justify-center w-3/4 h-16 lg:w-1/3"
+    >
       <SwiperComponent client:load arrayObjet={svgs} />
     </section>
     <section
-      class="flex flex-col items-center justify-center w-3/4 h-16 rounded-xl bg-[#00A9A5]"
+      class="flex flex-col items-center justify-center w-3/4 h-16 rounded-xl bg-[#4E148C] lg:w-1/3"
     >
       <h3>Habilidades blandas</h3>
     </section>
     <section
-      class="flex flex-col items-center justify-center text-center p-2 w-3/4 h-1/2 rounded-xl bg-[#00A9A5]"
+      class="flex flex-col items-center justify-center text-center p-2 w-3/4 h-1/2 rounded-xl bg-[#4E148C] lg:w-1/3"
     >
       <p>
         Soy alguien con buena comunicación, buen trabajo en equipo. Aprendo
-        rápido, no tengo problemas en enseñar y en escuchar consejos. <br>
+        rápido, no tengo problemas en enseñar y en escuchar consejos. <br />
         Tengo responsabilidad y compromiso.
       </p>
     </section>

@@ -26,21 +26,24 @@ const socials = [
 
 <Layout>
   <div
-    class="flex flex-col items-center mt-20 w-full h-full gap-2 text-[#F7F7F5]"
+    class="flex flex-col items-center mt-20 w-full h-full gap-2 text-[#F7F7F5] lg:items-start lg:justify-center lg:w-3/4 lg:h-3/4 lg:ml-20 lg:mt-0 lg:relative"
   >
     <section
-      class="flex flex-col justify-center w-3/4 h-3/4 rounded-xl bg-[#00A9A5] p-2 gap-4"
+      class="flex flex-col justify-center w-3/4 h-3/4 rounded-xl bg-[#4E148C] p-2 gap-4 lg:w-2/3 lg:h-full"
     >
-      <h1 class="text-2xl">Lawcito</h1>
+      <h1 class="text-2xl text-[#8EB5F0]">Lawcito</h1>
       <p class="text-md">
-        Hola, soy Emir, más conocido por mi gametag "Lawcito". Tengo 23 años,
-        estudio en la UTN La Plata y me encuentro continuamente desarrollando
-        mis habilidades como programador y desarrollador web, ya sea en cursos o
-        de forma autodidacta.
+        Hola, soy <span class="text-[#8EB5F0]">Emir</span>, más conocido por mi
+        gametag <span class="text-[#8EB5F0]">Lawcito</span>. Tengo 23 años,
+        estudio en la <span class="text-[#8EB5F0]">UTN La Plata</span> y me encuentro
+        continuamente desarrollando mis habilidades como <span
+          class="text-[#8EB5F0]">programador</span
+        > y <span class="text-[#8EB5F0]">desarrollador web</span>, ya sea en
+        cursos o de forma autodidacta.
       </p>
     </section>
-    <section class="flex flex-row w-3/4 h-12 gap-2">
-      <div class="w-full h-full rounded-xl bg-[#00A9A5]">
+    <section class="flex flex-row w-3/4 h-12 gap-2 lg:w-2/3 lg:h-24">
+      <div class="w-full h-full rounded-xl bg-[#4E148C]">
         <ul
           class="flex flex-row gap-4 justify-center items-center h-full w-full"
         >
@@ -57,23 +60,30 @@ const socials = [
           }
         </ul>
       </div>
-      <div class="w-full h-full rounded-xl bg-[#0B5351]"></div>
+      <div class="w-full h-full rounded-xl bg-[#613DC1]"></div>
     </section>
-    <section class="flex flex-row w-3/4 h-12 gap-2">
-      <div class="w-full h-full rounded-xl bg-[#0B5351]"></div>
+    <section class="flex flex-row w-3/4 h-12 gap-2 lg:w-2/3 lg:h-24">
+      <div class="w-full h-full rounded-xl bg-[#613DC1]"></div>
       <div
-        class="flex items-center justify-center w-full h-full rounded-xl bg-[#00A9A5]"
+        class="flex items-center justify-center w-full h-full rounded-xl bg-[#4E148C]"
       >
         <a href="/tecnologies">Tecnologías</a>
       </div>
     </section>
-    <section class="flex flex-row w-3/4 h-12 gap-2">
+    <section class="flex flex-row w-3/4 h-12 gap-2 lg:w-2/3 lg:h-24">
       <div
-        class="flex items-center justify-center w-full h-full rounded-xl bg-[#00A9A5]"
+        class="flex items-center justify-center w-full h-full rounded-xl bg-[#4E148C]"
       >
         <a href="/projects">Pryoectos</a>
       </div>
-      <div class="w-full h-full rounded-xl bg-[#0B5351]"></div>
+      <div class="w-full h-full rounded-xl bg-[#613DC1]"></div>
+    </section>
+    <section class="hidden lg:block absolute place-self-end">
+      <img
+        src="./imgs/lawPerfil.jpg"
+        alt="Imagen de Trafalgar D Water Law utilizada como foto de perfil en github por Lawcito"
+        class="w-64 h-full rounded-l-full "
+      />
     </section>
   </div>
 </Layout>

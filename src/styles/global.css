@@ -1,1 +1,6 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Rammetto+One&display=swap");
+@theme {
+ --font-Caveat: "Caveat", cursive;
+}
+@import "tailwindcss";

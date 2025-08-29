@@ -9,7 +9,7 @@ function SwiperComponent({ arrayObjet }) {
   const [swiperIndex, setSwiperIndex] = useState(0);
   const hasSVG = arrayObjet.some((item) => item.svg);
   return (
-    <div className="flex flex-col items-center w-full h-full">
+    <div className="flex flex-col items-center w-full h-full ">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         pagination={!hasSVG ? { clickable: true } : false}
@@ -25,35 +25,40 @@ function SwiperComponent({ arrayObjet }) {
         slidesPerView={1}
         loop={hasSVG}
         onSlideChange={(swiper) => setSwiperIndex(swiper.activeIndex)}
-        className="flex items-center justify-center w-3/4 "
+        className="flex items-center justify-center w-3/4 lg:w-1/2 lg:flex-none"
       >
         {arrayObjet.map((item, index) => (
           <SwiperSlide
             key={index}
-            className="flex items-center justify-center w-full h-full"
+            className="flex items-center justify-center w-full h-full "
           >
+            {/* Imagenes del carrusel de proyectos */}
             {item.img ? (
               <img
                 src={item.img}
                 alt={item.description}
-                className="h-full w-full"
+                className="h-full w-full lg:h-full lg:w-200"
               />
             ) : (
-              <img
-                src={item.svg}
-                alt={item.description}
-                className="flex h-16 w-full"
-              />
+              /* Si lo que recibe no es la imágen, cumple la otra función, mostrando los SVG del carrusel de skills */
+              <a href={item.href} target="_blank">
+                <img
+                  src={item.svg}
+                  alt={item.description}
+                  className="flex h-16 w-full"
+                />
+              </a>
             )}
           </SwiperSlide>
         ))}
       </Swiper>
+      {/* En caso de que SVG exista, no hace nada. Muestra la descripción de la imágen */}
       {hasSVG ? (
         ""
       ) : (
-        <section className="flex flex-col justify-center w-3/4 h-65 rounded-xl bg-[#00A9A5] mt-4">
+        <section className="flex flex-col justify-center w-3/4 h-65 rounded-xl bg-[#4E148C] mt-4 lg:w-1/2 lg:text-center ">
           <span>
-            <p>{arrayObjet[swiperIndex].description}</p>
+            <p className="p-2">{arrayObjet[swiperIndex].description}</p>
           </span>
         </section>
       )}
