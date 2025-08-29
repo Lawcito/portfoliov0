@@ -9,7 +9,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: "https://Lawcito.github.io",
+  site: "https://Lawcito.github.io/portfoliov0",
   base: '/portfoliov0',
   integrations: [react()],
 });
