@@ -11,5 +11,6 @@ export default defineConfig({
   },
   site: "https://Lawcito.github.io/portfoliov0",
   base: "/portfoliov0",
+  trailingSlash: "always",
   integrations: [react()],
 });
