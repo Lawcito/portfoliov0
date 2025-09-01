@@ -26,7 +26,7 @@ const socials = [
 
 <Layout>
   <div
-    class="flex flex-col items-center mt-20 w-full h-full gap-2 text-[#F7F7F5] lg:items-start lg:justify-center lg:w-3/4 lg:h-3/4 lg:ml-20 lg:mt-0 lg:relative"
+    class="flex flex-col-reverse items-center mt-20 w-full h-full gap-2 text-[#F7F7F5] lg:items-start lg:justify-center lg:w-3/4 lg:h-3/4 lg:ml-20 lg:mt-0 lg:relative"
   >
     <section
       class="flex flex-col justify-center w-3/4 h-3/4 rounded-xl bg-[#4E148C] p-2 gap-4 lg:w-2/3 lg:h-full"
@@ -60,29 +60,38 @@ const socials = [
           }
         </ul>
       </div>
-      <div class="w-full h-full rounded-xl bg-[#613DC1]"></div>
+      <div class="w-full h-full rounded-xl bg-[#613DC1] hidden lg:block"></div>
     </section>
     <section class="flex flex-row w-3/4 h-12 gap-2 lg:w-2/3 lg:h-24">
-      <div class="w-full h-full rounded-xl bg-[#613DC1]"></div>
       <div
-        class="flex items-center justify-center w-full h-full rounded-xl bg-[#4E148C]"
+        class="flex items-center justify-center w-1/2 h-full rounded-xl bg-[#613DC1]"
       >
-        <a href="/tecnologies">Tecnologías</a>
+        <a href="/portfoliov0/tecnologies" class="lg:hidden">Tecnologías</a>
+      </div>
+      <div
+        class="lg:flex items-center justify-center w-1/2 h-full rounded-xl bg-[#4E148C] hidden"
+      >
+        <a href="/portfoliov0/tecnologies" class="hidden">Tecnologías</a>
       </div>
     </section>
     <section class="flex flex-row w-3/4 h-12 gap-2 lg:w-2/3 lg:h-24">
       <div
-        class="flex items-center justify-center w-full h-full rounded-xl bg-[#4E148C]"
+        class="flex items-center justify-center w-1/2 h-full rounded-xl bg-[#4E148C]"
       >
-        <a href="/projects">Pryoectos</a>
+        <a href="/portfoliov0/projects">Pryoectos</a>
       </div>
-      <div class="w-full h-full rounded-xl bg-[#613DC1]"></div>
+      <div
+        class="w-full lg:w-1/2 h-full rounded-xl bg-[#613DC1] hidden lg:block"
+      >
+      </div>
     </section>
-    <section class="hidden lg:block absolute place-self-end">
+    <section
+      class="block absolute place-self-end top-45 right-22 lg:top-0 lg:right-0"
+    >
       <img
         src="./imgs/lawPerfil.jpg"
         alt="Imagen de Trafalgar D Water Law utilizada como foto de perfil en github por Lawcito"
-        class="w-64 h-full rounded-l-full "
+        class="w-16 lg:w-64 h-full rounded-s-xl lg:rounded-l-full"
       />
     </section>
   </div>

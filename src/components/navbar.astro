@@ -4,7 +4,7 @@ import abilitiesIcon from "../components/icons/abilitiesIcon.astro";
 import projectsIcon from "../components/icons/projectsIcon.astro";
 import "../styles/global.css";
 
-const base = import.meta.env.BASE_URL;
+const base = "/portfoliov0";
 
 const links = [
   {
@@ -13,11 +13,11 @@ const links = [
   },
   {
     Svg: abilitiesIcon,
-    href: `${base}tecnologies`,
+    href: `${base}/tecnologies`,
   },
   {
     Svg: projectsIcon,
-    href: `${base}projects`,
+    href: `${base}/projects`,
   },
 ];
 ---
