@@ -1,20 +1,21 @@
 ---
 import SwiperComponent from "../components/SwiperComponent.jsx";
 import Layout from "../layouts/Layout.astro";
+
+const base = "/portfoliov0/";
+
 const images = [
   {
-    img: "/imgs/SapuCraft.webp",
+    img: `${base}/imgs/SapuCraft.webp`,
     description: `En este proyecto realizado para un servidor de minecraft con amigos aprendí a integrar FireBase a un proyecto. Realizado con Vite y TailwindCSS`,
   },
   {
-    img: "/imgs/tattooWeb.webp",
-    description:
-      "Página web de tatuajes en la que me encargué de crear el Carrusel de links, footer y el Slider de Imagenes. Realizado con Vite y TailwindCSS",
+    img: `${base}/imgs/tattooWeb.webp`,
+    description: `Página web de tatuajes en la que me encargué de crear el Carrusel de links, footer y el Slider de Imagenes. Realizado con Vite y TailwindCSS`,
   },
   {
-    img: "/imgs/pokemonTrucho.webp",
-    description:
-      "Juego simple de pokemon creado en el curso de Programador del CFL404",
+    img: `${base}/imgs/pokemonTrucho.webp`,
+    description: `Juego simple de pokemon creado en el curso de Programador del CFL404`,
   },
 ];
 ---
