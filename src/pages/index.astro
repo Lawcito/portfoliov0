@@ -5,6 +5,8 @@ import Mail from "../components/icons/mailIcon.astro";
 import Linkedin from "../components/icons/linkedinIcon.astro";
 import "../styles/global.css";
 
+const base = "/portfoliov0/";
+
 const socials = [
   {
     icon: Github,
@@ -71,7 +73,7 @@ const socials = [
       <div
         class="lg:flex items-center justify-center w-1/2 h-full rounded-xl bg-[#4E148C] hidden"
       >
-        <a href="/portfoliov0/tecnologies" class="hidden">Tecnologías</a>
+        <a href="/portfoliov0/tecnologies" class="hidden lg:block">Tecnologías</a>
       </div>
     </section>
     <section class="flex flex-row w-3/4 h-12 gap-2 lg:w-2/3 lg:h-24">
@@ -89,7 +91,7 @@ const socials = [
       class="block absolute place-self-end top-45 right-22 lg:top-0 lg:right-0"
     >
       <img
-        src="./imgs/lawPerfil.jpg"
+        src=`${base}./imgs/lawPerfil.jpg`
         alt="Imagen de Trafalgar D Water Law utilizada como foto de perfil en github por Lawcito"
         class="w-16 lg:w-64 h-full rounded-s-xl lg:rounded-l-full"
       />
